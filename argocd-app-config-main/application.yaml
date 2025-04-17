@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/nowsha/argo-cd.git
+    targetRevision: HEAD
+    path: argocd-app-config-main/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
