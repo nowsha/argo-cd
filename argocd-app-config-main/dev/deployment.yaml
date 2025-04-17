@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nowshahri/python-app-v2.0
+        image: nowshahri/python-app-v1.0
         ports:
         - containerPort: 8080
